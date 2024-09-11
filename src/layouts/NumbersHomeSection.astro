@@ -1,0 +1,29 @@
+---
+import InfoCard from '../components/InfoCard.astro';
+import ClientsTree from '../components/ClientsTree.astro';
+
+const {title} = Astro.props;
+---
+<div class="senhasegura-numbers-home-section">
+    <div class="container-131 w-container">
+       <h2 class="heading-195">{title}</h2>
+
+       <ClientsTree />
+
+       <div data-w-id="e8107f85-ac57-9d6c-0603-6092d8c58234" class="w-layout-grid home-b-numbers-grid">
+          <InfoCard href="#recommendation" percentage="99" icon="like">
+                <strong>recommendation</strong> on Gartner Peer Insights with <strong>5/5 top-rated customer support.</strong>
+          </InfoCard>
+          <InfoCard href="#comparison" percentage="90" icon="rocket">
+                <strong>faster Time to Value (TTV) </strong>with a rapid<strong> 7-minute deployment.</strong>
+          </InfoCard>
+          <InfoCard href="#comparison" percentage="70" icon="money">
+                <strong>lower Total Cost of Ownership (TCO) </strong>than other leading solutions.
+          </InfoCard>
+          <InfoCard href="#comparison" percentage="100" icon="shield">
+                <strong>lower Total Cost of Ownership (TCO) </strong>than other leading solutions.
+          </InfoCard>
+
+       </div>
+    </div>
+ </div>

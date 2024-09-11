@@ -1,0 +1,5 @@
+---
+const {width = 100, src, clientClass, alt=""} = Astro.props
+---
+
+<img {width} loading="lazy" {alt} {src} class={clientClass}/>

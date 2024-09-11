@@ -1,0 +1,24 @@
+---
+import clientsImages from '../data/clientsImages.js';
+import Client from '../components/Client.astro';
+
+const clientsPerGroup = 6;
+// Divide os clients em grupos de 6
+const groupedClients = [];
+for (let i = 0; i < clientsImages.length; i += clientsPerGroup) {
+  groupedClients.push(clientsImages.slice(i, i + clientsPerGroup));
+}
+---
+{groupedClients.map((group, groupIndex) => (
+  <div class="clients-wrapper-three" key={groupIndex}>
+    {group.map((clientImage, clientIndex) => (
+      <Client 
+        key={clientIndex} 
+        src={clientImage.src} 
+        alt={clientImage.alt} 
+        clientClass={clientImage.clientClass} 
+        width={clientImage.width} 
+      />
+    ))}
+  </div>
+))}	

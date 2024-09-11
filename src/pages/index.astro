@@ -3,9 +3,11 @@ import '../styles/global.css'
 
 import MainLayout from '../layouts/MainLayout.astro'
 import Navigation from '../layouts/Navigation.astro'
+import NumbersHomeSection from '../layouts/NumbersHomeSection.astro';
 import TextImageSection from '../layouts/TextImageSection.astro'
 import Footer from '../layouts/Footer.astro'
 import CtaDemo from '../layouts/CtaDemo.astro'
+
 
 import HomeHero from '../components/HomeHero.astro'
 import InfoCard from '../components/InfoCard.astro'
@@ -24,42 +26,10 @@ import webinarsData from '../data/webinarsData';
       <MainLayout >
          <Navigation /> 
          <HomeHero />
-         <div class="senhasegura-numbers-home-section">
-            <div class="container-131 w-container">
-               <h2 class="heading-195">CISOs e equipes de segurança cibernética em mais de 60 países confiam no senhasegura.</h2>
-               <div class="clients-wrapper-three">
-                  <img width="100" loading="lazy" alt="Ephicient logo" src="https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/657a3feecddf2d406a21fd87_Ativo%203cinza.webp" class="rosank-img-menor"/>
-                  <img width="80" alt="2020INC logo" src="https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/657f452f1f17d5781e6a3d5c_leroy-merlin-logo-black-and-white.png" loading="lazy" class="leroy-merlin-logo"/>
-                  <img width="100" loading="lazy" alt="OE logo" src="https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/657a3ff0da2066f511ef4c54_Ativo%2011.webp" class="rosank-img-menor"/>
-                  <img width="140" loading="lazy" alt="The Paak logo" src="https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/661ecf1b9a6310ec5cb0eedc_santander-logo-gs.png" class="santander-logo-gs"/>
-                  <img width="100" loading="lazy" alt="The Paak logo" src="https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/657a3ff226570fedf3747d91_Ativo%2013.webp" class="rosank-img-menor"/>
-                  <img width="100" loading="lazy" alt="" src="https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/658429cb44cd786f2f340779_Logo_Grupo_Boticario_500x165.webp" class="logo-boticario"/>
-               </div>
-               <div class="clients-senhasegura-row2">
-                  <img width="100" loading="lazy" alt="" src="https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/661ece3d55717b82481b4933_pgim_center_global_navy.png" class="logo-butantan"/>
-                  <img width="100" loading="lazy" alt="AriseHealth logo" src="https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/65b804b6010d2f267194c2ac_liberty-seguros-logo-142E921493-seeklogo.com.png" class="logo-liberty"/>
-                  <img width="100" loading="lazy" alt="OE logo" src="https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/65b14a0adf214cf15593d8ec_1200px-Telef%C3%B3nica_Logo.svg.avif" class="logo-telefonica"/>
-                  <img width="100" loading="lazy" alt="Ephicient logo" src="https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/657a3ff2ead5afc2bdf85642_Ativo%2014.webp" class="rosank-img-menor"/>
-                  <img width="100" loading="lazy" alt="Toogether logo" src="https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/661ecf7f44dd0fe14eb0ca3e_hotroy-logo.png" class="logo-picpay"/>
-                  <img width="100" loading="lazy" alt="2020INC logo" src="https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/657a3fedb68e8f44acca764b_Ativo%206cinza.webp" class="rosank-img-menor"/>
-               </div>
-               <div data-w-id="e8107f85-ac57-9d6c-0603-6092d8c58234" class="w-layout-grid home-b-numbers-grid">
-                  <InfoCard href="#recommendation" percentage="99" icon="like">
-                        <strong>recommendation</strong> on Gartner Peer Insights with <strong>5/5 top-rated customer support.</strong>
-                  </InfoCard>
-                  <InfoCard href="#comparison" percentage="90" icon="rocket">
-                        <strong>faster Time to Value (TTV) </strong>with a rapid<strong> 7-minute deployment.</strong>
-                  </InfoCard>
-                  <InfoCard href="#comparison" percentage="70" icon="money">
-                        <strong>lower Total Cost of Ownership (TCO) </strong>than other leading solutions.
-                  </InfoCard>
-                  <InfoCard href="#comparison" percentage="100" icon="shield">
-                        <strong>lower Total Cost of Ownership (TCO) </strong>than other leading solutions.
-                  </InfoCard>
-
-               </div>
-            </div>
-         </div>
+         
+         <NumbersHomeSection 
+            title="CISOs e equipes de segurança cibernética em mais de 60 países confiam no senhasegura." 
+         />
 
          <TextImageSection
             sectionClass="quadrant-leader-section"
@@ -74,7 +44,7 @@ import webinarsData from '../data/webinarsData';
            </div>
 
             <div class="uui-layout06_content-2" slot="content">
-               <div id="w-node-_3e3d850e-7b13-a579-9218-b699d3df4e61-d3df4e5a" class="div-block-144">
+               <div class="div-block-144">
                   <div class="w-layout-grid grid-reports-achievements-small">
                      <RatingCard 
                         href='/pt-br/empresa/conquistas' 
@@ -213,8 +183,8 @@ import webinarsData from '../data/webinarsData';
             sectionClass="market-copy"
             imgAlign="right">
                <div slot="content" class="uui-layout06_content-2">
-                  <div id="w-node-_364bd04a-9c3d-539a-4486-d5369a0d9e07-29cb972b" class="div-block-112">
-                     <img width="140" id="w-node-_364bd04a-9c3d-539a-4486-d5369a0d9e08-29cb972b" alt="Gartner Peer Insights logo." src="https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/655f5bfc0a04e9aa2981e573_gartner-peer-insights-logo.png" loading="lazy" srcset="https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/655f5bfc0a04e9aa2981e573_gartner-peer-insights-logo-p-500.png 500w, https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/655f5bfc0a04e9aa2981e573_gartner-peer-insights-logo.png 907w" sizes="(max-width: 479px) 100vw, 140px" class="image-54"/>
+                  <div class="div-block-112">
+                     <img width="140" alt="Gartner Peer Insights logo." src="https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/655f5bfc0a04e9aa2981e573_gartner-peer-insights-logo.png" loading="lazy" srcset="https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/655f5bfc0a04e9aa2981e573_gartner-peer-insights-logo-p-500.png 500w, https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/655f5bfc0a04e9aa2981e573_gartner-peer-insights-logo.png 907w" sizes="(max-width: 479px) 100vw, 140px" class="image-54"/>
                   </div>
                   <h3 class="uui-heading-medium-17">Melhor suporte e maior satisfação do cliente do mercado</h3>
                   <div class="paragraph-quadrant">Somente o senhasegura tem um índice de satisfação do cliente de 5 estrelas e uma taxa de referência de 98%.</div>
@@ -270,7 +240,7 @@ import webinarsData from '../data/webinarsData';
                   <div class="home-blog-clm1">
                      <div class="home-blog-text-p">Confira o novo blog de Cibersegurança e Gestão de Risco da senhasegura.</div>
                   </div>
-                  <a data-w-id="67cfc694-9591-d702-0113-d10810dd30ba" href="/pt-br/blog" class="home-blog-link w-inline-block">
+                  <a href="/pt-br/blog" class="home-blog-link w-inline-block">
                      <div class="text-block-329">Explore agora »</div>
                   </a>
                </div>
