@@ -1,0 +1,26 @@
+---
+import Button from '../components/Button.astro'
+const {sectionClass = "", sectionTitle, imgAlign = 'right'} = Astro.props
+---
+
+<div class={sectionClass}>
+     <div class="container-competitors-quadrant w-container">
+        <div class="w-layout-blockcontainer container-133 w-container">
+           <h3 class="uui-heading-medium-17">{sectionTitle}</h3>
+        </div>
+        <div class="w-layout-grid home_all-in-1-grid">
+           {
+			 imgAlign && imgAlign === "left" && (
+			 		<slot name="image" />
+			 	)
+			}
+           <slot name="content" />
+           {
+			 imgAlign && imgAlign === "right" && (
+			 		<slot name="image" />
+			 	)
+			}
+           
+        </div>
+     </div>
+  </div>

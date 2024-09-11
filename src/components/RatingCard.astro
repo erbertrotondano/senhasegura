@@ -1,0 +1,13 @@
+---
+const {href, img, width} = Astro.props
+---
+<a {href} class="link-block-38 w-inline-block">
+   <div class="div-grid-reports-achievements-small">
+      <div class="div-block-180">
+         <img src={img} loading="lazy" {width} sizes="(max-width: 1279px) 80px, (max-width: 1439px) 6vw, 80px" alt="The Gar" class="image-63"/>
+      </div>
+      <h4>
+         <slot />
+      </h4>
+   </div>
+</a>

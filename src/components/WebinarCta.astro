@@ -1,0 +1,19 @@
+---
+const {href, tag, title, excerpt, avatars} = Astro.props
+---
+
+<a id="w-node-_639d5aa6-1a5c-0731-9db0-048b94262c90-29cb972b" {href} class="brix---card-link-content-center w-inline-block">
+  <div class="brix---mg-bottom-8px-5">
+     <div class="brix---color-neutral-868">
+        <div class="sysf-tagline-9">{tag}</div>
+        <div class="rich-materials-title-text-2">{title} | <strong>{excerpt}</strong>
+        </div>
+     </div>
+     <div class="brix---color-neutral-868">
+        <div class="sysf-avatars-wrapper">
+        	{avatars.map(src => (<img {src} loading="lazy" alt="" class="sysf-avatar-2 sysf-default sysf-group"/>))}
+        </div>
+     </div>
+  </div>
+  <div class="brix---btn-secondary-full-width">Assista agora</div>
+</a>

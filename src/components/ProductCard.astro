@@ -1,0 +1,18 @@
+---
+const {href, title, text, btnText} = Astro.props
+---
+<a {href} class="link-card-products w-inline-block">
+  <div class="card-products-items">
+     <div class="uui-contact09_item-content">
+        <h3 class="uui-heading-xxsmall-2">{title}</h3>
+        <div class="card-pam-core-text-p">{text}</div>
+        <div class="uui-space-small">
+        </div>
+        <div class="uui-button-row-5 is-reverse-mobile-landscape">
+           <div class="uui-button-wrapper-4 max-width-full-mobile-landscape">
+              <div class="btn-products-without-link">{btnText}</div>
+           </div>
+        </div>
+     </div>
+  </div>
+</a>

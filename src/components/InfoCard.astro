@@ -1,0 +1,16 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const {href, icon, percentage} = Astro.props
+---
+
+<a id="w-node" {href} class="link-block-34 w-inline-block">
+  <div id="w-node-e8107f85-ac57-9d6c-0603-6092d8c58236-d8c58234" class="demo-why-cards">
+     <Icon name={icon} width={45} height={45} fill="none" app="ikonik" class="ikonik-ensk5"/>
+     <div class="text-block-311">{percentage}<span class="text-span-202">%</span>
+     </div>
+     <p class="paragraph-366">
+        <slot />
+     </p>
+  </div>
+</a>

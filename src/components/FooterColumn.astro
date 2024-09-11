@@ -1,0 +1,14 @@
+---
+import FooterLink from '../components/FooterLink.astro';
+
+const {columnTitle = null, links = [], divClass = "spark-footer-column-4"} = Astro.props;
+---
+<div class={divClass}>
+     { columnTitle && (<h4 class="spark-bold-sub-heading-2">{columnTitle}</h4> ) }
+     <slot name='address-content' /> 
+	     {links.map(link => (
+	     	<FooterLink href={link.href} title={link.title} />
+	     ))}
+     </slot>
+     
+  </div>

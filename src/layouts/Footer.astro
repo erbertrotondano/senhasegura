@@ -1,0 +1,63 @@
+---
+import FooterColumn from '../components/FooterColumn.astro';
+import SocialLink from '../components/SocialLink.astro';
+
+import footerColumnsData from '../data/footerColumnsData';
+import socialLinksData from '../data/socialLinksData';
+---
+<footer class="flex-row-footer">
+ <footer class="footer">
+    <div class="spark-container-48">
+       <div class="spark-flex-row-23 spark-spaced-footer">
+          <FooterColumn divClass="footer-contact-column">
+	          <div slot="address-content">
+	             <div class="footer-text-bold">FALE CONOSCO!</div>
+	             <div class="footer-talk-text">Nossa equipe está pronta para atender a todas as necessidades de sua empresa. Entre em contato conosco agora!</div>
+	             <a href="/pt-br/demo" class="btn-contact-footer-s w-button">Contate agora</a>
+	          </div>
+          </FooterColumn>
+          
+          {footerColumnsData.map(footerColumn => (
+          	<FooterColumn columnTitle={footerColumn.columnTitle} links={footerColumn.links} />
+          ))}
+          	<FooterColumn columnTitle="Endereço">
+				<a slot="address-content" href="#" class="spark-left-aligned-link-2">Rua Joaquim Antunes, 767. São Paulo — SP — Brasil<br/>
+					<br/>
+					<span class="text-span-97">
+						<strong>
+							11 3069 3910<br/><br/>
+						</strong>
+					</span>
+				</a>
+          	<FooterColumn />
+
+          <div class="spark-footer-column-4">
+             <h4 class="spark-bold-sub-heading-2">Endereço</h4>
+             
+          </div>
+       </div>
+       <div class="flex-row-footer spark-24px-row-spacing">
+          <a href="#" class="spark-brand-3 w-inline-block">
+          <img src="https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/65707558b59111b28ab6eaa4_senhasegura%20logo.png" loading="lazy" width="202" alt="senhasegura logo in colors
+             " class="spark-brand-logo-10"/>
+          </a>
+          <div id="w-node-d813a6ad-9be3-6a50-160c-29157f52d8e2-7f52d8dc" class="w-layout-hflex flex-block-6">
+             <div class="w-layout-grid uui-footer05_social-icons">
+                {socialLinksData.map(social => (
+                     <SocialLink icon={social.icon} href={social.href} />
+                  ))}
+             </div>
+          </div>
+          <div class="footer-text-small text-color-gray500">Direitos autorais © senhasegura <span id='currentYear'>YYYY</span> MT4 Tecnologia<br/>Todos os direitos reservados.</div>
+          <div id="w-node-d813a6ad-9be3-6a50-160c-29157f52d932-7f52d8dc" class="w-layout-grid uui-footer05_legal-list">
+             <a href="https://cdn.prod.website-files.com/6531856af18f18cb20cfa436/658c1f3351d5da0bce3317c4_5003-senhasegura-TOS-PT.pdf" class="uui-footer05_legal-link">Termos</a>
+             <a href="/pt-br/politica-de-privacidade-e-cookies" class="uui-footer05_legal-link">Privacidade</a>
+             <a href="/pt-br/politica-de-privacidade-e-cookies" class="uui-footer05_legal-link">Biscoitos</a>
+          </div>
+       </div>
+    </div>
+ </footer>
+</footer>
+<script>
+document.querySelector('#currentYear').textContent = new Date().getFullYear().toString();
+</script>

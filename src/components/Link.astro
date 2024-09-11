@@ -1,0 +1,8 @@
+---
+const {text, type, href} = Astro.props
+const btnType = type === "secondary" ? '2' : '1';
+import '../styles/global.css'
+---
+<a href={href} class=`header-btn${btnType} w-button`>
+ <strong>{text}</strong>
+ </a>
