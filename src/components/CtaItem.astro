@@ -1,0 +1,13 @@
+---
+const {imgsrc, text} = Astro.props
+---
+<div class="cta-item-demo">
+  <div class="uui-layout68_item-icon-wrapper">
+     <div>
+        <img src={imgsrc} loading="lazy" height="35" alt=""/>
+     </div>
+  </div>
+  <div>
+     <div class="uui-text-size-medium-24">{text}</div>
+  </div>
+</div>
